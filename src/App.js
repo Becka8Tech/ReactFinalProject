@@ -8,8 +8,6 @@ import Nav from './components/Nav';
 
 
 function App() {
-const { imdbID } = useParams();
-
   return (
     <Router>
     <div className="App">
@@ -17,7 +15,7 @@ const { imdbID } = useParams();
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path="/movies" exact element={<Movies />} />
-        <Route path=':movie' element={<Movie />} />
+        <Route path='/movie/:imdbID' element={<Movie />} />
       </Routes>
     </div>
     </Router>

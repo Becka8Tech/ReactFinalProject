@@ -9,7 +9,6 @@ const Movies = () => {
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState("");
   const [error, setError] = useState(null);
-  // const [imdbID, setImdbID] = useState(null);
 
   
   
@@ -67,22 +66,6 @@ const Movies = () => {
     }
   };
   
-  // useEffect(() => {
-  //     const fetchData = async () => {
-  //         try {
-  //             const response = await fetch(`https://www.omdbapi.com/?apikey=81761b68&i=${imdbID}`);
-  //             const data = await response.json();
-  //             if (data && data.ID) {
-  //                 setImdbID(data.ID); // Store the ID as a token
-  //             }
-  //         } catch (error) {
-  //             console.error('Error fetching data:', error);
-  //         }
-  //     };
-
-  //     fetchData();
-  // }, []);
-
   return (
     <>
       <div id="app">
@@ -195,7 +178,7 @@ const Movies = () => {
                       data-imdb-id={movie.imdbID}
                     >
                       {/* {imdbID ? ( */}
-                    <Link to={'/movie'}>
+                    <Link to={`/movie/${movie.imdbID}`}>
                       <h2>{movie.Title}</h2>
                       <h3>{movie.Year}</h3>
                       <img src={movie.Poster} alt={movie.Title} />
