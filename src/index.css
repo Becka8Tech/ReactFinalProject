@@ -86,7 +86,8 @@ element.style {
 #results {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between
+    justify-content: space-between;
+    margin: 0 -24px;
 }
 
 .content-wrapper__new {
@@ -437,6 +438,7 @@ h2 {
 }
 
 .loading-state {
+  font-size: 24px;
   margin: 80px 0;
   width: 100%;
 }
@@ -606,13 +608,6 @@ select {
   color: #7342d6;
 }
 
-.row {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 .book__selected--top {
   padding: 0 24px;
   margin-bottom: 8px;
@@ -631,9 +626,17 @@ select {
   margin-bottom: 0;
   margin-top: 0;
 }
+.book__selected--title--top:hovor {
+  text-decoration: underline;
+}
 
 .book__selected {
   display: flex;
+}
+
+.book__selected--figure {
+  width: 100%;
+  justify-content: flex-start;
 }
 
 .book__selected--figure {
@@ -644,15 +647,15 @@ select {
   align-items: center;
 }
 
-.book__selected--figure {
-  width: 100%;
-  justify-content: flex-start;
-}
-
 .book__selected--img {
   max-height: 500px;
   width: auto;
   max-width: 100%;
+}
+
+.movie__selected--info {
+  color: #551A8B;
+  font-size: larger;
 }
 
 .book__selected--description {
@@ -660,23 +663,31 @@ select {
   padding: 16px 32px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .book__selected--title {
-  margin-bottom: 8px
+  margin: 10px 0;       
+  padding: 5px;       
+  font-size: 24px;     
+  line-height: 1.5;  
+  word-wrap: break-word;
 }
 
 .book__summary {
   margin-bottom: 16px;
+  padding: 48px;
 }
 
 .book__summary--title {
-  margin-bottom: 8px;
+  font-size: 24px;
+  margin: 10px 0;
+  padding: 5px;
 }
 
 .book__summary--para {
   margin-bottom: 16px;
+  font-size: 20px;
+  color: #551A8B;
 }
 
 .fa-spinner {
@@ -692,13 +703,6 @@ select {
     transform: rotate(360deg);
   }
 }
-
-
-.books__container {
-  padding: 24px 0;
-}
-
-
 
 /* 
 ANIMATION
@@ -1099,17 +1103,17 @@ button:active {
   text-decoration: underline;
 }
 
-.navbar {
+/* .navbar {
   height: 165px;
   display: flex;
   align-items: center;
   padding: 0 50px;
   font-size: 18px;
   font-weight: 600;
-}
+} */
 
 .navbar {
-  height: 326px;
+  height: 224px;
   padding: 40px 15px;
   background-color: grey;
   display: flex;
