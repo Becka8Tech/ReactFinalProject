@@ -51,6 +51,9 @@ const Movie = () => {
               <div className="book__selected--description">
                 <h2 className="book__selected--title">{data.Title}</h2>
                 <div className="movie__selected--info">
+                Actors: {data.Actors}
+                </div>
+                <div className="movie__selected--info">
                 Genre: {data.Genre}
                 </div>
                 <div className="movie__selected--info">
